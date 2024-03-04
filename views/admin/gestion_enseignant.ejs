@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Afficheur NTIC</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/vendor.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/flat-admin.css">
+
+    <!-- Theme -->
+    <link rel="stylesheet" type="text/css" href="/stylesheets/theme/blue-sky.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/theme/blue.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/theme/red.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/theme/yellow.css">
+
+    <style>
+        .iconi {
+            margin-left: 15px;
+        }
+
+        .error {
+            padding: 15px;
+            float: left;
+            background-color: #F44336;
+            color: black;
+            margin: 0 20px 20px 15px;
+            border-radius: 3px;
+        }
+
+        .succes {
+            padding: 15px;
+            float: left;
+            background-color: #8bc34a;
+            color: black;
+            margin: 0 20px 20px 15px;
+            border-radius: 3px;
+        }
+    </style>
+
+</head>
+<body>
+<aside class="app-sidebar" id="sidebar">
+        <div class="sidebar-header">
+          
+        </div>
+        <div class="sidebar-menu">
+            <ul class="sidebar-nav">
+                <li class="active">
+                    <a href="/admin">
+                        <div class="icon">
+                            <i class="fa fa-tasks" aria-hidden="true"></i>
+                        </div>
+                        <div class="title">La Gestion</div>
+                    </a>
+                </li>
+                <li class="@@menu.messaging">
+                    <a href="pages/messaging.html">
+                        <div class="icon">
+                            <i class="fa fa-comments" aria-hidden="true"></i>
+                        </div>
+                        <div class="title">La Délibiration </div>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+
+    </aside>
+
+    <script type="text/ng-template" id="sidebar-dropdown.tpl.html">
+        <div class="dropdown-background">
+            <div class="bg"></div>
+        </div>
+        <div class="dropdown-container">
+            {{list}}
+        </div>
+    </script>
+    <div class="app-container">
+
+        <nav class="navbar navbar-default" id="navbar">
+            <div class="container-fluid">
+                <div class="navbar-collapse collapse in">
+                    <ul class="nav navbar-nav navbar-mobile">
+                        <li>
+                            <button type="button" class="sidebar-toggle">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                        </li>
+                        <li class="logo">
+                            <a class="navbar-brand" href="#"><span class="highlight">Flat v3</span> Admin</a>
+                        </li>
+                        <li>
+                            <button type="button" class="navbar-toggle">
+                                <img class="profile-img" src="/images/profile.png">
+                            </button>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-left">
+                        <li class="navbar-title">BienVenus Dans La Gestion Et LA  Délibiration NTIC</li>
+
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+
+
+                        <li class="dropdown profile">
+                            <a href="/html/pages/profile.html" class="dropdown-toggle" data-toggle="dropdown">
+                                <img class="profile-img" src="/images/man.png">
+                                <div class="title">Plus Informations</div>
+                            </a>
+                            <div class="dropdown-menu">
+                                <div class="profile-info">
+                                    <h4 class="username">Plus Informations</h4>
+                                </div>
+                                <ul class="action">
+                                    <li>
+                                        <a href="#">
+                                            <span class="badge badge-danger pull-right">5</span>
+                                            WWW.Canstantine2@gmail.com
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            +21457812654
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="row">
+
+            <form method="post">
+                <input type="hidden" name="_method" value="delete"/>
+                <input type="submit" data-toggle="modal" data-target="#addenseignant"
+                        style="float: right;margin:0 20px 20px 0;" class="btn btn-danger" value="Supprimé enseignant" />
+            </form>
+            <div class="col-xs-12">
+                <div class="card">
+                    <div class="card-header">
+                        Les informations de enseignant
+                    </div>
+                    <div class="card-body no-padding">
+                        <form method="post" class="form form-horizontal">
+                            <div class="form-group" style="padding: 10px 30px">
+                                <label class="col-md-3 control-label">Nom</label>
+                                <div class="col-md-9">
+                                    <input class="form-control" placeholder="" name="name" type="text"
+                                           value="<%= enseignant[0].name %>">
+                                </div>
+                            </div>
+
+                            <div class="form-group" style="padding: 10px 30px">
+                                <label class="col-md-3 control-label">Username</label>
+                                <div class="col-md-9">
+                                    <input class="form-control" placeholder="" name="username" type="text" value="<%= enseignant[0].username %>">
+                                </div>
+                            </div>
+
+                            <div class="form-group" style="padding: 10px 30px">
+                                <label class="col-md-3 control-label">Password</label>
+                                <div class="col-md-9">
+                                    <input class="form-control" placeholder="" name="password" type="password">
+                                </div>
+                            </div>
+
+                            <div class="form-footer">
+                                <div class="form-group">
+                                    <div class="col-md-9 col-md-offset-6">
+                                        <input type="submit" name="submit" style="margin-left: 410px"
+                                               class="btn btn-success">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<script type="text/javascript" src="/javascripts/vendor.js"></script>
+<script type="text/javascript" src="/javascripts/app.js"></script>
+
+
+</body>
+</html>

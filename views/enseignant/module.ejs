@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Afficheur NTIC</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/vendor.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/flat-admin.css">
+
+    <!-- Theme -->
+    <link rel="stylesheet" type="text/css" href="/stylesheets/theme/blue-sky.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/theme/blue.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/theme/red.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/theme/yellow.css">
+
+    <style>
+        .iconi {
+            margin-left: 15px;
+        }
+
+        .error {
+            padding: 15px;
+            float: left;
+            background-color: #F44336;
+            color: black;
+            margin: 0 20px 20px 15px;
+            border-radius: 3px;
+        }
+
+        .succes {
+            padding: 15px;
+            float: left;
+            background-color: #8bc34a;
+            color: black;
+            margin: 0 20px 20px 15px;
+            border-radius: 3px;
+        }
+    </style>
+
+</head>
+<body>
+<div class="app app-default">
+
+    <aside class="app-sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <a class="sidebar-brand" href="#"><span class="highlight">Afficheur</span>NTIC</a>
+            <button type="button" class="sidebar-toggle">
+                <i class="fa fa-times"></i>
+            </button>
+        </div>
+        <div class="sidebar-menu">
+            <ul class="sidebar-nav">
+                <li class="active">
+                    <a href="/admin">
+                        <div class="icon">
+                            <i class="fa fa-tasks" aria-hidden="true"></i>
+                        </div>
+                        <div class="title">Accueil</div>
+                    </a>
+                </li>
+                <li class="@@menu.messaging">
+                    <a href="pages/messaging.html">
+                        <div class="icon">
+                            <i class="fa fa-comments" aria-hidden="true"></i>
+                        </div>
+                        <div class="title">Délibiration final</div>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+
+    </aside>
+
+    <script type="text/ng-template" id="sidebar-dropdown.tpl.html">
+        <div class="dropdown-background">
+            <div class="bg"></div>
+        </div>
+        <div class="dropdown-container">
+            {{list}}
+        </div>
+    </script>
+    <div class="app-container">
+
+        <nav class="navbar navbar-default" id="navbar">
+            <div class="container-fluid">
+                <div class="navbar-collapse collapse in">
+                    <ul class="nav navbar-nav navbar-mobile">
+                        <li>
+                            <button type="button" class="sidebar-toggle">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                        </li>
+                        <li class="logo">
+                            <a class="navbar-brand" href="#"><span class="highlight">Flat v3</span> Admin</a>
+                        </li>
+                        <li>
+                            <button type="button" class="navbar-toggle">
+                                <img class="profile-img" src="/images/profile.png">
+                            </button>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-left">
+                        <li class="navbar-title">Accueil</li>
+
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+
+
+                        <li class="dropdown profile">
+                            <a href="/html/pages/profile.html" class="dropdown-toggle" data-toggle="dropdown">
+                                <img class="profile-img" src="/images/profile.png">
+                                <div class="title">Profile</div>
+                            </a>
+                            <div class="dropdown-menu">
+                                <div class="profile-info">
+                                    <h4 class="username">Scott White</h4>
+                                </div>
+                                <ul class="action">
+                                    <li>
+                                        <a href="#">
+                                            <span class="badge badge-danger pull-right">5</span>
+                                            My Inbox
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Logout
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="card">
+                    <div class="card-header">
+                        Listes des modules
+                    </div>
+                    <div class="card-body no-padding">
+                        <div id="DataTables_Table_0_wrapper"
+                             class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+                            <table class="datatable table table-striped primary dataTable no-footer"
+                                   id="DataTables_Table_0" role="grid" aria-describedby="DataTables_Table_0_info"
+                                   style="width: 100%;" width="100%" cellspacing="0">
+                                <thead>
+                                <tr role="row">
+                                    <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1"
+                                        colspan="1" style="width: 159px;"
+                                        aria-label="Name: activate to sort column ascending">Nom
+                                    </th>
+                                    <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1"
+                                        colspan="1" style="width: 230px;"
+                                        aria-label="Position: activate to sort column ascending">Gestion
+                                    </th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <% for (var i = 0; i < module.length; i++) { %>
+                                <tr role="row" class="odd">
+                                    <td class=""><%= module[i].name %></td>
+                                    <td class="">
+                                        <a href="/enseignant/module/<%= module[i].name %>"><i class="fa fa-wrench iconi" style="color: #0480be"
+                                                                aria-hidden="true"></i></a>
+                                    </td>
+                                </tr>
+                                <% } %>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<script type="text/javascript" src="/javascripts/vendor.js"></script>
+<script type="text/javascript" src="/javascripts/app.js"></script>
+
+
+</body>
+</html>

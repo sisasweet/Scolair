@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Afficheur NTIC</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/vendor.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/flat-admin.css">
+
+    <!-- Theme -->
+    <link rel="stylesheet" type="text/css" href="/stylesheets/theme/blue-sky.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/theme/blue.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/theme/red.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/theme/yellow.css">
+
+</head>
+<body>
+<div class="app app-default">
+
+    <aside class="app-sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <!--<a class="sidebar-brand" href="#"><span class="highlight">Bienvenue</span>Home</a>
+            <button type="button" class="sidebar-toggle">
+                <i class="fa fa-times"></i>
+            </button>-->
+        </div>
+        <div class="sidebar-menu">
+            <ul class="sidebar-nav">
+                <li class="active">
+                    <a href="/admin">
+                           
+                        <div class="icon">
+                        <i class="fa fa-tasks" aria-hidden="true"></i>
+                   
+                            </div>
+                         <div class="title">La Gestion</div>
+                    
+                    </a>
+                </li>
+                <li class="@@menu.messaging">
+                    <a href="/admin/delib">
+                        <div class="icon">
+                            <i class="fa fa-comments" aria-hidden="true"></i>
+                        </div>
+                        <div class="title">La Délibération</div>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+
+    </aside>
+
+    <script type="text/ng-template" id="sidebar-dropdown.tpl.html">
+        <div class="dropdown-background">
+            <div class="bg"></div>
+        </div>
+        <div class="dropdown-container">
+            {{list}}
+        </div>
+    </script>
+    <div class="app-container">
+
+        <nav class="navbar navbar-default" id="navbar">
+            <div class="container-fluid">
+                <div class="navbar-collapse collapse in">
+                    <ul class="nav navbar-nav navbar-mobile">
+                        <li>
+                            <button type="button" class="sidebar-toggle">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                        </li>
+                        <li class="logo">
+                            <a class="navbar-brand" href="#"><span class="highlight">Flat v3</span> Admin</a>
+                        </li>
+                        <li>
+                            <button type="button" class="navbar-toggle">
+                                <img class="profile-img" src="/images/man.png">
+                            </button>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-left">
+                        <li class="navbar-title">BienVenus Dans La Gestion Et LA  Délibiration NTIC </li>
+
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+
+
+                        <li class="dropdown profile">
+                            <a href="/html/pages/profile.html" class="dropdown-toggle" data-toggle="dropdown">
+                                <img class="profile-img" src="/images/man.png">
+                                <div class="title">Plus</div>
+                            </a>
+                            <div class="dropdown-menu">
+                                <div class="profile-info">
+                                    <h4 class="username">Plus Informations</h4>
+                                </div>
+                                <ul class="action">
+                                    <li>
+                                        <a href="#">
+                                            <span class="badge badge-danger pull-right">5</span>
+                                            Email:WWW.Canstantine2@gmail.DZ
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            +21789645321
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+ 
+    <!-- ==== ABOUT ==== -->
+		<!--<div class="container" id="about" name="about">-->
+			<div class="row white">
+			<br>
+				<h1 class="centered">Informer Plus Sur Notre Gestion </h1>
+				<hr>
+				
+				<div class="col-lg-6">
+					<p>  Dans La Gestion De Délibération Nous traitons Tous Les Traitemens des Enseigants Et Les Etudiants Et l'aafictations des Modules aux Enseigants ,la délibération des Pvs Final et avants ,Tout Les Notes Sont traitent Ici Soit Les Notes Des TPs ou Des td Et  Les Controles.  </p>
+				</div><!-- col-lg-6 -->
+				
+				<div class="col-lg-6">
+					<p> SLV Si vous etes un enseigant entrer choisit Votre gestion Des Notes Des Etudiants et Entre Votre Authentification et Si Vous etes Un etudiant svp vous pouvez Consultet Juste Votre Pv et Contactre Nous SUr Email et Lemail est Envoyez a l'admin mais Si Vous etes Un Responsable donc Svp Vous Pouvez gérer tout LA gestion des enseignant ou Etudiants Entrer Votre Autenhtification D'abord.</p>
+				</div><!-- col-lg-6 -->
+			</div><!-- row -->
+		
+		
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                <a class="card card-banner card-blue-light" href="/admin/module">
+                    <div class="card-body">
+                        <i class="icon fa fa-book fa-4x"></i>
+                        <div class="content">
+                            <div class="title">La Gestion des Modules</div>
+                            <div class="value"><span class="sign"></span>100</div>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                <a class="card card-banner card-yellow-light" href="/admin/enseignant">
+                    <div class="card-body">
+                        <i class="icon fa fa-user fa-4x"></i>
+                        <div class="content">
+                            <div class="title">LA Gestion des enseignants</div>
+                            <div class="value"><span class="sign"></span>200</div>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                <a class="card card-banner card-blue-light" href="/admin/student">
+                    <div class="card-body">
+                        <i class="icon fa fa-user-plus fa-4x"></i>
+                        <div class="content">
+                            <div class="title">La Gestion Des étudiants</div>
+                            <div class="value"><span class="sign"></span>500</div>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+   
+		
+   
+  
+<script type="text/javascript" src="/javascripts/vendor.js"></script>
+<script type="text/javascript" src="/javascripts/app.js"></script>
+
+
+</body>
+</html>
